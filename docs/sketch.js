@@ -47,7 +47,7 @@ class Carro {
     fill(color);
     rect(this.x, this.y, this.width, this.height);
     
-    this.y = this.y + random(-0.65, 0.65);
+    this.y = this.y + random(-0.60, 0.60);
 
     if (this.isJumping) {
       this.velocity += this.gravity;
@@ -58,16 +58,16 @@ class Carro {
       }
     } else {
       this.x += this.direction * this.xSpeed;
-      if (this.x + this.width > width || this.x < -15) {
+      if (this.x + this.width > width || this.x < -10) {
         this.direction *= -1.1;
-        this.y = -5;
+        this.y = 5;
       }
     }
         // Actualizamos la posición horizontal del carro en cada iteración
     this.x += this.direction * this.xSpeed;
-    if (this.x + this.width > width || this.x < -15) {
+    if (this.x + this.width > width || this.x < -10) {
       this.direction *= -1.1;
-      this.y = height - 200;
+      this.y = height - 150;
     }
   }
 
